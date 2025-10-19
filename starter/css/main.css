@@ -259,4 +259,124 @@ ul {
 Navbar
 ===============
 */
+.navbar {
+  background: var(--white);
+  width: 100%;
+  box-shadow: var(--shadow-1);
+}
 
+.nav-center {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.nav-logo img {
+  width: 200px;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none; /* hide on desktop */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  text-transform: capitalize;
+  color: var(--grey-900);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--primary-500);
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* show toggle */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 6rem; /* below header */
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    display: none; /* hidden by default */
+  }
+
+  .nav-links.show {
+    display: flex; /* show when toggle clicked */
+  }
+
+  .nav-link {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--grey-200);
+  }
+}
+@media screen and(min-width:992px) {
+  .nav-btn{
+    display: none;
+  }
+  .navbar{
+    height:6rem;
+  }
+
+}
+.page-footer {
+  background: var(--black); /* test color */
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.page-footer a,span {
+  color: #ff69b4; /* pink */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+@media screen and (min-width: 992px) {
+  .page-footer {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* =======================
+   PAGE CONTENT
+======================= */
+.page {
+  min-height: calc(100vh - 8rem); /* space for navbar + footer */
+  padding: 2rem;
+}
+
+  
+}
