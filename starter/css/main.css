@@ -378,13 +378,14 @@ Navbar
   padding: 2rem;
 }
   
-.hero{
-  height:40vh;
+.hero {
+  height: 40vh;
   background: url('../assets/main.jpeg') center/cover no-repeat;
   margin-bottom: 2rem;
   border-radius: var(--borderRadius);
-  position:relative;
+  position: relative;
 }
+
 
 .hero-container{
   position: absolute;
